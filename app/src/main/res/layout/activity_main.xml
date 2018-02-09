@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.namhto.dxpbox.MainActivity">
+
+    <ImageView
+        android:id="@+id/bogoss"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="30dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:drawSelectorOnTop="true"
+        android:focusable="true"
+        app:srcCompat="@mipmap/ribery" />
+
+    <ImageView
+        android:id="@+id/caisse"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="30dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:drawSelectorOnTop="true"
+        android:focusable="true"
+        app:srcCompat="@mipmap/isma" />
+
+    <ImageView
+        android:id="@+id/reptile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:drawSelectorOnTop="true"
+        android:focusable="true"
+        app:srcCompat="@mipmap/cyril" />
+
+</LinearLayout>
