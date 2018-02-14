@@ -1,44 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/background"
-    android:gravity="center_vertical|center_horizontal"
-    android:orientation="vertical"
     tools:context="com.namhto.dxpbox.MainActivity">
 
-    <ImageView
-        android:id="@+id/bogoss"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginBottom="30dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        android:drawSelectorOnTop="true"
-        android:focusable="true"
-        app:srcCompat="@mipmap/ribery" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/caisse"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginBottom="30dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        android:drawSelectorOnTop="true"
-        android:focusable="true"
-        app:srcCompat="@mipmap/isma" />
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="5dp">
 
-    <ImageView
-        android:id="@+id/reptile"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        android:drawSelectorOnTop="true"
-        android:focusable="true"
-        app:srcCompat="@mipmap/cyril" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
 
-</LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@mipmap/ribery" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:columnCount="5"
+                        android:orientation="vertical"
+                        android:rowCount="2">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossAlexandre"
+                            android:text="Alexandre" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossAntoine"
+                            android:text="Antoine" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossCyril"
+                            android:text="Cyril" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossDavid"
+                            android:text="David" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossJulien"
+                            android:text="Julien" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossMaxime"
+                            android:text="Maxime" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossOthman"
+                            android:text="Othman" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossQuentin"
+                            android:text="Quentin" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossThierry"
+                            android:text="Thierry" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="bogossThomas"
+                            android:text="Thomas" />
+
+                    </GridLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="5dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@mipmap/isma" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:columnCount="2"
+                        android:orientation="vertical"
+                        android:rowCount="2">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="caisse1"
+                            android:text="TVPALC 1" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="caisse2"
+                            android:text="TVPALC 2" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="caisse3"
+                            android:text="TVPALC 3" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="caisse4"
+                            android:text="TVPALC 4" />
+
+                    </GridLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="5dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@mipmap/cyril" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:columnCount="2"
+                        android:orientation="vertical"
+                        android:rowCount="2">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="reptile1"
+                            android:text="[ - | ¤ # ! ) =" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="reptile2"
+                            android:text="\\ # ~ ^ *" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="reptile3"
+                            android:text=": § \ ( ? ) 8 +" />
+
+                    </GridLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="5dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@mipmap/maxime" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:columnCount="3"
+                        android:orientation="vertical"
+                        android:rowCount="2">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="maximeUmUm"
+                            android:text="Um Um" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="maximeEncule"
+                            android:text="Enculé" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="maximeOui"
+                            android:text="Oui" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="maximeOuiOui"
+                            android:text="Oui Oui" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="maximeOuiOuiOui"
+                            android:text="Oui Oui Oui" />
+
+                    </GridLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

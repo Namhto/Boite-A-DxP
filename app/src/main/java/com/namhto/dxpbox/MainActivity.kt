@@ -3,88 +3,69 @@ package com.namhto.dxpbox
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.ImageView
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var bogoss: ImageView
-    private lateinit var caisse: ImageView
-    private lateinit var reptile: ImageView
     private lateinit var mediaPlayerBogoss: MediaPlayer
     private lateinit var mediaPlayerCaisse: MediaPlayer
     private lateinit var mediaPlayerReptile: MediaPlayer
-    private val random: Random = Random()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        bogoss = findViewById(R.id.bogoss)
-        bogoss.setOnClickListener { playBogoss() }
-
-        caisse = findViewById(R.id.caisse)
-        caisse.setOnClickListener { playCaisse() }
-
-        reptile = findViewById(R.id.reptile)
-        reptile.setOnClickListener { playReptile() }
 
         mediaPlayerBogoss = MediaPlayer.create(this, R.raw.david)
         mediaPlayerCaisse = MediaPlayer.create(this, R.raw.isma1)
         mediaPlayerReptile = MediaPlayer.create(this, R.raw.reptile1)
     }
 
-    private fun playBogoss() {
+    private fun playBogoss(trackId: Int) {
         mediaPlayerBogoss.stop()
         mediaPlayerBogoss.release()
-        mediaPlayerBogoss = initMediaPlayerBogoss(random.nextInt(9))
+        mediaPlayerBogoss = MediaPlayer.create(this, trackId)
         mediaPlayerBogoss.start()
     }
 
-    private fun playCaisse() {
+    private fun playCaisse(trackId: Int) {
         mediaPlayerCaisse.stop()
         mediaPlayerCaisse.release()
-        mediaPlayerCaisse = initMediaPlayerCaisse(random.nextInt(4))
+        mediaPlayerCaisse = MediaPlayer.create(this, trackId)
         mediaPlayerCaisse.start()
     }
 
-    private fun playReptile() {
+    private fun playReptile(trackId: Int) {
         mediaPlayerReptile.stop()
         mediaPlayerReptile.release()
-        mediaPlayerReptile = initMediaPlayerReptile(random.nextInt(1))
+        mediaPlayerReptile = MediaPlayer.create(this, trackId)
         mediaPlayerReptile.start()
     }
 
-    private fun initMediaPlayerBogoss(choice: Int): MediaPlayer {
-        return when (choice) {
-            0 -> MediaPlayer.create(this, R.raw.alexandre)
-            1 -> MediaPlayer.create(this, R.raw.antoine)
-            2 -> MediaPlayer.create(this, R.raw.cyril)
-            3 -> MediaPlayer.create(this, R.raw.david)
-            4 -> MediaPlayer.create(this, R.raw.julien)
-            5 -> MediaPlayer.create(this, R.raw.maxime)
-            6 -> MediaPlayer.create(this, R.raw.othman)
-            7 -> MediaPlayer.create(this, R.raw.quentin)
-            8 -> MediaPlayer.create(this, R.raw.thierry)
-            9 -> MediaPlayer.create(this, R.raw.thomas)
-            else -> MediaPlayer.create(this, R.raw.david)
-        }
-    }
+    fun bogossAlexandre(v: View) = playBogoss(R.raw.alexandre)
+    fun bogossAntoine(v: View) = playBogoss(R.raw.antoine)
+    fun bogossCyril(v: View) = playBogoss(R.raw.cyril)
+    fun bogossDavid(v: View) = playBogoss(R.raw.david)
+    fun bogossJulien(v: View) = playBogoss(R.raw.julien)
+    fun bogossMaxime(v: View) = playBogoss(R.raw.maxime)
+    fun bogossOthman(v: View) = playBogoss(R.raw.othman)
+    fun bogossQuentin(v: View) = playBogoss(R.raw.quentin)
+    fun bogossThierry(v: View) = playBogoss(R.raw.thierry)
+    fun bogossThomas(v: View) = playBogoss(R.raw.thomas)
 
-    private fun initMediaPlayerCaisse(choice: Int): MediaPlayer {
-        return when (choice) {
-            0 -> MediaPlayer.create(this, R.raw.isma1)
-            1 -> MediaPlayer.create(this, R.raw.isma2)
-            2 -> MediaPlayer.create(this, R.raw.isma3)
-            3 -> MediaPlayer.create(this, R.raw.isma4)
-            else -> MediaPlayer.create(this, R.raw.isma1)
-        }
-    }
+    fun caisse1(v: View) = playCaisse(R.raw.isma1)
+    fun caisse2(v: View) = playCaisse(R.raw.isma2)
+    fun caisse3(v: View) = playCaisse(R.raw.isma3)
+    fun caisse4(v: View) = playCaisse(R.raw.isma4)
 
-    private fun initMediaPlayerReptile(choice: Int): MediaPlayer {
-        return when (choice) {
-            0 -> MediaPlayer.create(this, R.raw.reptile1)
-            else -> MediaPlayer.create(this, R.raw.reptile1)
-        }
-    }
+    fun reptile1(v: View) = playReptile(R.raw.reptile1)
+    fun reptile2(v: View) = playReptile(R.raw.reptile2)
+    fun reptile3(v: View) = playReptile(R.raw.reptile3)
+
+    fun maximeUmUm(v: View) = playReptile(R.raw.maxime1)
+    fun maximeEncule(v: View) = playReptile(R.raw.maxime2)
+    fun maximeOui(v: View) = playReptile(R.raw.maxime4)
+    fun maximeOuiOui(v: View) = playReptile(R.raw.maxime3)
+    fun maximeOuiOuiOui(v: View) = playReptile(R.raw.maxime5)
 }
