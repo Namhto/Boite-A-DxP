@@ -4,14 +4,13 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.ImageView
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mediaPlayerBogoss: MediaPlayer
     private lateinit var mediaPlayerCaisse: MediaPlayer
     private lateinit var mediaPlayerReptile: MediaPlayer
+    private lateinit var mediaPlayerJmlp: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         mediaPlayerBogoss = MediaPlayer.create(this, R.raw.david)
         mediaPlayerCaisse = MediaPlayer.create(this, R.raw.isma1)
         mediaPlayerReptile = MediaPlayer.create(this, R.raw.reptile1)
+        mediaPlayerJmlp = MediaPlayer.create(this, R.raw.neestcepas)
     }
 
     private fun playBogoss(trackId: Int) {
@@ -41,6 +41,13 @@ class MainActivity : AppCompatActivity() {
         mediaPlayerReptile.release()
         mediaPlayerReptile = MediaPlayer.create(this, trackId)
         mediaPlayerReptile.start()
+    }
+
+    private fun playJmlp(trackId: Int) {
+        mediaPlayerJmlp.stop()
+        mediaPlayerJmlp.release()
+        mediaPlayerJmlp = MediaPlayer.create(this, trackId)
+        mediaPlayerJmlp.start()
     }
 
     fun bogossAlexandre(v: View) = playBogoss(R.raw.alexandre)
@@ -68,4 +75,8 @@ class MainActivity : AppCompatActivity() {
     fun maximeOui(v: View) = playReptile(R.raw.maxime4)
     fun maximeOuiOui(v: View) = playReptile(R.raw.maxime3)
     fun maximeOuiOuiOui(v: View) = playReptile(R.raw.maxime5)
+
+    fun jeanne(v: View) = playJmlp(R.raw.jeanne)
+    fun auSecours(v: View) = playJmlp(R.raw.ausecours)
+    fun nEstCePas(v: View) = playJmlp(R.raw.neestcepas)
 }

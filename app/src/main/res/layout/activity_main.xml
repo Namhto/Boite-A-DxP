@@ -17,14 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            card_view:cardBackgroundColor="@color/colorPrimary"
-            card_view:cardCornerRadius="5dp"
-            card_view:cardElevation="5dp">
+            card_view:cardBackgroundColor="@color/colorPrimary">
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:fadeScrollbars="false">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -116,14 +115,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            card_view:cardBackgroundColor="@color/colorPrimary"
-            card_view:cardCornerRadius="5dp"
-            card_view:cardElevation="5dp">
+            card_view:cardBackgroundColor="@color/colorPrimary">
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:fadeScrollbars="false">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -179,14 +177,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            card_view:cardBackgroundColor="@color/colorPrimary"
-            card_view:cardCornerRadius="5dp"
-            card_view:cardElevation="5dp">
+            card_view:cardBackgroundColor="@color/colorPrimary">
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:fadeScrollbars="false">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -235,14 +232,14 @@
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:cardBackgroundColor="@color/colorPrimary"
-            card_view:cardCornerRadius="5dp"
-            card_view:cardElevation="5dp">
+            android:layout_marginBottom="10dp"
+            card_view:cardBackgroundColor="@color/colorPrimary">
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:fadeScrollbars="false">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -292,6 +289,62 @@
                             android:layout_width="110dp"
                             android:onClick="maximeOuiOuiOui"
                             android:text="Oui Oui Oui" />
+
+                    </GridLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/colorPrimary">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@mipmap/jmlp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:columnCount="2"
+                        android:orientation="vertical"
+                        android:rowCount="2">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="jeanne"
+                            android:text="Jeanne" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="auSecours"
+                            android:text="Au secours" />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="110dp"
+                            android:onClick="nEstCePas"
+                            android:text="N'est-ce-pas"
+                            android:textSize="12dp"/>
 
                     </GridLayout>
                 </LinearLayout>
